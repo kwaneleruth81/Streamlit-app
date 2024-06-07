@@ -46,7 +46,7 @@ def user_input_features():
 
 # Display user input
 st.subheader('User Input Parameters')
-st.write(input_data)
+#st.write(input_data)
 
 # Predict user input
 prediction = model.predict(input_data)
