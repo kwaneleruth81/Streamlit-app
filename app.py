@@ -42,7 +42,7 @@ def user_input_features():
     features = pd.DataFrame(data, index=[0])
     return features
 
-input_data = user_input_features()
+#input_data = user_input_features()
 
 # Display user input
 st.subheader('User Input Parameters')
