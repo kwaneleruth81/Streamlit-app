@@ -6,29 +6,29 @@ import pandas as pd
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 
-path = r"C:\Users\Admin\Downloads\HPS_data.csv"
+#path = r"C:\Users\Admin\Downloads\HPS_data.csv"
 # Load dataset
-data= pd.read_csv(path)
+#data= pd.read_csv(path)
 
 # Drop date
-data = data.drop('Date', axis=1)
-data.head()
+#data = data.drop('Date', axis=1)
+#data.head()
 
 # Preprocessing 
-data.fillna(0, inplace=True)  # Fill missing values
-X = data.drop(columns=['Maint Cost/U'])
-y = data['Maint Cost/U']
+#data.fillna(0, inplace=True)  # Fill missing values
+#X = data.drop(columns=['Maint Cost/U'])
+#y = data['Maint Cost/U']
 
 # Split the dataset
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Train the model
-model = RandomForestRegressor(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
+#model = RandomForestRegressor(n_estimators=100, random_state=42)
+#model.fit(X_train, y_train)
 
 # Predict and evaluate
-y_pred = model.predict(X_test)
-mse = mean_squared_error(y_test, y_pred)
+#y_pred = model.predict(X_test)
+#mse = mean_squared_error(y_test, y_pred)
 
 # Streamlit app
 st.title('Maintenance Cost Optimization with Random Forest')
